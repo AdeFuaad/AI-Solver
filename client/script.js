@@ -75,7 +75,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   try {
-    const response = await fetch("http://localhost:3000", {
+    const response = await fetch("https://me-q4yy.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
