@@ -17,7 +17,7 @@ app.use(express.json());
 
 // Allow CORS for all routes
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5173");
+  res.setHeader("Access-Control-Allow-Origin", "https://meai.vercel.app"); // Update the allowed origin here
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   next();
@@ -52,7 +52,7 @@ app.post("/", async (req, res) => {
     console.log("Remaining Requests:", remainingRequests);
     console.log("Limit Per Minute:", limitPerMinute);
     console.log("Limit Per Day:", limitPerDay);
-    
+
     res.status(200).send({
       bot: response.data.choices[0].text,
     });
